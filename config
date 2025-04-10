@@ -48,7 +48,7 @@ floating_modifier $mod
 bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+Shift+w kill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
@@ -188,3 +188,5 @@ bar {
 bindsym $mod+c exec google-chrome-stable
 bindsym $mod+x exec code
 bindsym $mod+m exec spotify
+
+exec_always --no-startup-id feh --bg-scale ~/dotfiles/1351306.png
