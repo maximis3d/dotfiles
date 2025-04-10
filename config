@@ -189,5 +189,6 @@ bar {
 bindsym $mod+c exec google-chrome-stable
 bindsym $mod+x exec code
 bindsym $mod+m exec spotify
+bindsym $mod+z exec systemctl --user start docker-desktop
 
 exec_always --no-startup-id feh --bg-scale ~/dotfiles/1351306.png
