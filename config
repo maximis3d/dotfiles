@@ -187,3 +187,4 @@ bar {
 
 bindsym $mod+c exec google-chrome-stable
 bindsym $mod+x exec code
+bindsym $mod+m exec spotify
