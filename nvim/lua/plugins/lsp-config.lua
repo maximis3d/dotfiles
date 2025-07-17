@@ -18,13 +18,22 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require("lspconfig")
 
       -- Set up the Lua language server
-      lspconfig.lua_ls.setup({})
-      lspconfig.gopls.setup({})
-      lspconfig.ts_ls.setup({})
-
+      lspconfig.lua_ls.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.gopls.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.ts_ls.setup({
+        capabilities = capabilities,
+      })
+      lspconfig.clangd.setup({
+        capabilities = capabilities,
+      })
       -- Keymaps
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
@@ -32,8 +41,14 @@ return {
 
       vim.diagnostic.config({
         virtual_text = {
-          enabled = true,
+          spacing = 4,
+          prefix = "●",
+          enabled = false,
         },
+        signs = true,
+        underline = true,
+        update_in_insert = false,
+        severity_sort = true,
       })
     end,
   },
