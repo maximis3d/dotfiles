@@ -43,7 +43,7 @@ return {
         virtual_text = {
           spacing = 4,
           prefix = "●",
-          enabled = false,
+          enabled = true,
         },
         signs = true,
         underline = true,
