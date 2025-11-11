@@ -25,6 +25,8 @@ return {
         "typescript",
         "tsx",
         "json",
+        "c",
+        "cpp",
       },
     },
   },
